@@ -1,0 +1,12 @@
+const number=12345
+let fname="shubham"
+var city="nagpur" // do not use var because it is outdated and had problem related to scope
+//number=90            //js will give error, can  not assign value to already declared constant
+console.log(number)
+console.log(fname)
+console.table([number,city,fname]) // prints values in a table
+
+let adhaar
+console.log(adhaar)// prints 'undefined' .
+city="wadsa" // changing value of city
+console.log(city)
