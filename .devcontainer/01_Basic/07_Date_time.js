@@ -10,8 +10,8 @@ console.log(mycreatedDate.toDateString()) //month start from 0 - Thu Apr 10 2025
 let myCreatedNewDate=new Date("2025-01-14")// here month start from 1 Tue Jan 14 2025
 console.log(myCreatedNewDate.toDateString())
 
-let newDate =Date.now()
-console.log(newDate)//1745266758075 in miliseconds
+let newDate =Date.now() 
+console.log(newDate)//1745266758075 in miliseconds // this is useful when on ticket booking sites we need comaprison of booking time
 console.log(mycreatedDate.getDate())
 console.log(mycreatedDate.getDay())
 console.log(mycreatedDate.getMonth()+1) // +1 this is for month starts from 0 so, add one to it
