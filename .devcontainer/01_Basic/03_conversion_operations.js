@@ -50,3 +50,12 @@ num1=num2=num3=2+2
 let gameCounter=100
 gameCounter++// similarly there is ++gameCounter which will increament before usage like java
 console.log(gameCounter)
+
+console.log("2">1)//coverts"2" to 2 and then prints ture
+//now comaprison and equality operators works differently
+console.log(null>0) //false, converts null to 0
+console.log(null==0)//false, does not convert
+console.log(null>=0) //true, converts null to 0
+
+// strictly check "===" which also check datatype
+console.log("3"===1)// will prints false
