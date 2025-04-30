@@ -44,6 +44,8 @@ coding.forEach(function(name)
     console.log(name)
 })
 
+
+
 const obj1=[
     {name:"shubham",
         id:10},
