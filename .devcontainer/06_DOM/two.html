@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wed</div>
+        <div class="day">thur</div>
+        <div class="day">fri</div>
+        <div class="day">sat</div>
+    </div>
+</body>
+<script>
+    const parents=document.querySelector('.parent')
+    console.log(parents);
+    console.log(parents.children);
+    console.log(parents.children[3].innerHTML) ;
+     for (let index =0; index < parents.children.length; index++) 
+     {
+        console.log(parents.children[index].innerHTML);
+        
+   
+    }
+parents.children[0].style.color="pink"
+parents.children[1].style.backgroundColor="yellow"
+const days= document.querySelector('.day')
+console.log(days);
+console.log(days.parentElement);
+console.log(days.firstChild);
+console.log(days.lastChild);
+
+// creating a new element
+const obj=document.createElement('div')
+console.log(obj)
+obj.className="newdiv"
+obj.id="1"
+obj.setAttribute("title","title")
+obj.style.backgroundColor="black"
+obj.style.padding="10px"
+obj.style.fontSize="20px"
+obj.style.color="white"
+// obj.innerText="hello shubham"
+obj.textContent="hello shubham sir"
+document.body.appendChild(obj)
+
+
+
+
+
+
+
+
+
+  
+</script>
+</html>
+

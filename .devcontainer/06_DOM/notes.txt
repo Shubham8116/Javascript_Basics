@@ -1,0 +1,42 @@
+********************************** DOM selectors **************************
+document.getElementById('text')
+document.getElementsByClassName('extra')
+document.getElementsByName('sub')
+document.getElementById('text').getAttribute('class')
+document.getElementById('text').getAttribute('name')
+//there is also set attibute to set it
+document.getElementById('text').setAttribute('class','new_value')
+
+const title=document.getElementById('heading')
+title.innertext - if the text is affected by some css property then it will not shown like hidden text(ex.display:none property of css)
+title.textContent - it shows full text whether it is affected by css or not
+title.innerHTML - shows full elements and text inside element .
+we can also use them to change the text textContent
+title.innertext="hello"
+
+*** querySelector and querySelectorAll ***
+
+document.querySelector(#idname)
+document.querySelector(.classname)
+document.querySelector('h1') - for element
+document.querySelector('input[type="text"]')
+document.querySelector('ul')
+document.querySelector('ul').querySelector('li').style.backgroundColor="green" - it is only applicable to first item in list
+//to select other items in list use -
+const temp=document.querySelectorAll('li')
+temp[0].innerText="new value"
+
+querySelectorAll and querySelector gives node list just like array so, we can apply forEach loop to them
+
+but if we get HTML collection then we have to convert it to array to apply forEach loop , normal loop can be applied without converting to array - 
+for example document.ElementsByClassName returns html collection 
+const temp=document.getElementsByClassName('list-item') - consider every list item(li) has this class name
+new_array=Array.from(temp) - from method of array
+now apply loop to it
+new_array.forEach(function(abc){
+    abc.style.color='green'
+})
+
+
+
+
