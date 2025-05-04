@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM remove and adding</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>java</li>
+    </ul>
+
+</body>
+<script>
+    //adding element li to ul
+    // first approach
+function addlang(lang)
+{
+  const obj=document.createElement('li')
+  obj.textContent=lang
+  document.querySelector('.language').appendChild(obj)
+
+}
+addlang('html')
+addlang('c')
+addlang('python')
+addlang('css')
+addlang('english')
+
+// second approach
+function addlanguage(lang)
+{
+    const obj=document.createElement('li')
+    obj.appendChild(document.createTextNode(lang))
+    document.querySelector('.language').appendChild(obj)
+
+}
+
+addlanguage('c sharp')
+addlanguage('typescript')
+
+// editing the element
+const newlang=document.querySelector('li:nth-child(3)')
+console.log(newlang)
+//newlang.textContent="marathi"
+//other approach
+const newli=document.createElement('li')
+newli.textContent="hindi"
+newlang.replaceWith(newli)
+
+//remove the element
+const remo=document.querySelector('li:last-child')
+remo.remove()
+const remo1=document.querySelector('li:nth-child(2)')
+remo1.remove()
+</script>
+</html>
