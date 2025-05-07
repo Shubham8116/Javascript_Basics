@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div>
+        <ul id="images">
+            <li><img width="150px" id="ironman" src="https://w0.peakpx.com/wallpaper/32/344/HD-wallpaper-ironman-avengers-hero-heroes-infinity-iron-iron-man-man-marvel-super-war.jpg"></li>
+            <li><img width="150px" id="thor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQDxl7RAai1LHuBp4mc1baC3k48rf9kSK10w&s"></li>
+
+            <li><img width="150px" id="captain" src="https://www.shutterstock.com/image-vector/captain-america-art-design-vector-600nw-2290235547.jpg"></li>
+
+            <li><img width="150px" id="drstrange" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZOHBRBXub6aAC6TybZqQKKDm5RxxNp3bHpw&s"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+    </div>
+</body> 
+<script> 
+// document.getElementById('ironman').onclick=function(){
+//       alert("i am iron man")
+//   }
+
+//Event propogation in javascript-
+
+//1) event bubbling (when you set 'false' as third parameter)- here the inner element event first trigger then the outer element event get trigger
+document.getElementById('images').addEventListener('click',function(e){
+    console.log('inside images');
+    
+
+},false)
+
+document.getElementById('ironman').addEventListener('click',function(e){
+    console.log('inside iron man')
+},false)
+// output - inside iron man then inside images
+
+//2) event capturing (when you set 'true' as third parameter) - here the outer element event first trigger then inner element event trigger
+document.getElementById('images').addEventListener('click',function(e){
+    console.log('inside images');
+    
+},true)
+
+document.getElementById('ironman').addEventListener('click',function(e){
+    console.log('inside iron man')
+    
+},true)
+//output - inside images then inside iron man
+
+//bubbling means niche se upar
+//capturing means upar se niche
+// to stop this propogation use e.stopPropagation() inside function
+
+document.getElementById('google').addEventListener('click',function(e)
+{
+    e.preventDefault();// this will stop further operation of element, here anchor tag will stop operation
+})
+//here we are removing images that are clicked
+// in this program img tag is inside li tag so we have to remove li tag using parentNode.
+document.querySelector('#images').addEventListener('click',function(e){
+    if(e.target.tagName==='IMG')
+{
+    e.target.parentNode.remove();
+}
+})
+</script>
+</html>
