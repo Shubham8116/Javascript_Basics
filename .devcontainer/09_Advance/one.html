@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello shubham</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //1)
+
+    // const obj= function(){console.log('shubham');
+    // }
+    // setTimeout(obj,5000)
+
+    //2)
+
+//     setTimeout(function(){
+// console.log('shubham');
+// }, 5000);
+
+// now we are changing h1 content after 5 seconds
+//setTimeout(function(){
+  //  const obj=document.querySelector('h1').innerHTML="Good by shubham"
+//},5000)
+//this setTimeout() method is used on the website for pop up windows or showing discount after some time
+
+// now we are stopping setTimeout when user clicks on stop button
+const obj= setTimeout(function(){
+const time=document.querySelector('h1').innerHTML='Good by shubham'
+},5000)
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(obj);
+    console.log('timeout stopped')
+})
+</script>
+</html>

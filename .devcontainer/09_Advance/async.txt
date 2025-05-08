@@ -13,3 +13,6 @@ so it is based on the use cases whether to write blocking or non blocking code.
 setTimeout is used for scheduling a function to run after a specified delay. setInterval is used for running a function repeatedly at specified intervals.
 
 If the program has setTimeout and setInterval methods then are added to task queue , later they are added to call stack.
+
+setTimeout() method executes once after a specified time in mili sec.
+setInterval() method executes repeatedly after a specified interval in mili sec.
