@@ -1,4 +1,7 @@
 1) Javascript is synchronous(one by one code running).
+However, it can handle asynchronous operations using mechanisms like callbacks, Promises, and async/await.
+This allows JavaScript to perform non-blocking operations, such as fetching data from a server,
+without halting the execution of the rest of the code
 2) Javascript is single threaded.
 3) It executes one line of code at a time.
 4) Each operation waits for the last one to complete before execution.
