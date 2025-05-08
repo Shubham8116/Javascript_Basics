@@ -1,0 +1,15 @@
+1) Javascript is synchronous(one by one code running).
+2) Javascript is single threaded.
+3) It executes one line of code at a time.
+4) Each operation waits for the last one to complete before execution.
+
+5) blocking code vs non blocking code -
+
+blocking code blocks the flow of execution like for example first it read the file then other operation will be done.
+non blocking code do not block the flow of execution for example file reading in background while other operations are performed.
+
+so it is based on the use cases whether to write blocking or non blocking code.
+
+setTimeout is used for scheduling a function to run after a specified delay. setInterval is used for running a function repeatedly at specified intervals.
+
+If the program has setTimeout and setInterval methods then are added to task queue , later they are added to call stack.
