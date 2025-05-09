@@ -1,0 +1,12 @@
+1) console.log() is a developer tool in browser provided by google chrome's v8 engine .
+v8 engine and nodeJS is written in c++.
+
+2) Promise -
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+A Promise is in one of these states:
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed. 
+
