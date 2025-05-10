@@ -10,3 +10,24 @@ pending: initial state, neither fulfilled nor rejected.
 fulfilled: meaning that the operation was completed successfully.
 rejected: meaning that the operation failed. 
 
+fetch - 
+1) The Fetch API provides an interface for fetching resources across the network.
+ It is more powerful and replacement for XMLHttpRequest.
+
+2) It returns a Promise which uses resolve and reject object.
+If interviewer asks about server error code 404 handled by then or catch ? -
+so it is handled by then.
+404 -" Page Not Found," indicates that the server cannot locate the specific webpage requested by the user.
+
+fetch's priority is high, it runs first then other code executes.
+in memory there is a special queue other than task queue called as 'priority queue' .
+the fetch callback goes into this queue and put into the call stack first then other callbacks or functions added into the call stack.
+working of fetch -
+when fetch is executes, it first do 2 tasks-
+1) it creates two memory onfulfilled and onrejection.
+2) it calls the resource across network
+then the response is stored in onfulfilled and errors are stored in onrejection.
+then we get the actual data in .then() and .catch() . 
+
+
+
