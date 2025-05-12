@@ -1,0 +1,23 @@
+Javascript is a prototype based language.
+when we use new keyword constructor function gets called ex. new promise().
+means a new object is created and properties are assigned to that object.
+
+Prototype -
+
+In JavaScript, prototype is a powerful feature that allows objects to inherit properties and methods from other objects
+if a property or method not found in an object then JavaScript look for it using prototype chaining(prototype inside prototype) until it reaches null.
+You can add methods to a prototype or object.
+example - 
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.greet = function() {
+    console.log(`Hello, my name is ${this.name}`);
+};
+
+const alice = new Person("Alice");
+alice.greet(); // Output: Hello, my name is Alice
+
+*** agar ek object ko dusre object ki property ka access dena hai to prototype use karna- 
+Object.setPrototypeOf(object1,object2) // object 1 will access properties of object2 . 
