@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+<script>
+    class data{
+        constructor()
+        {
+            this.username="shubham"
+            this.server="localhost"
+
+            document.querySelector('button').addEventListener('click',this.handleClick.bind(this))
+            // if we dont write bind(this) then in console.log(this.server) current context will be button because addeventlistener calling the handleclick method
+    
+            // therefore we are writing bind to bind class context .
+        }
+        handleClick()
+        {
+            console.log("button clicked")
+            console.log(this.server)      //here, now it will print localhost else it will print  undefined we dont write bind. 
+        }
+    }
+
+    const obj= new data();
+
+    </script>
+</html>
