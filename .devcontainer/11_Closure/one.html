@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure and lexical scoping</title>
+</head>
+<body>
+<button  id="orange">orange</button>    
+<button  id="green">green</button>    
+</body>
+<script>
+// lexical scoping
+function outer()
+{
+    let username="shubham";
+    // console.log(secret);     // will give error - secret is not defined
+    
+    function innerOne()
+    {
+        let secret="1234";
+     console.log(username," from innerOne");
+     
+    }
+    function innerTwo()
+    {
+        console.log(username," from innerTwo");
+       // console.log(secret);  // will give error
+        
+    }
+    innerOne();
+    innerTwo();
+    
+}
+
+outer();
+
+// closure
+function init() {
+  let name = "Mozilla"; 
+  function displayName() 
+  {
+    console.log(name);
+  }
+  return displayName;
+}
+const callFun=init();
+callFun();
+
+//real time example of closure and lexical scoping
+function handler(color)
+{
+    return function()
+    {
+        document.body.style.backgroundColor=`${color}`;  
+    }
+}
+
+document.querySelector('#orange').onclick=handler('orange');
+document.querySelector('#green').onclick=handler('green');
+
+// if we dont write function inside function and only write handler function then it will get directly executed on page reload.
+// therefore we are returning a function only when .onclick event happen . 
+
+
+</script>
+</html>

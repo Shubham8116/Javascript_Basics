@@ -1,0 +1,3 @@
+1) Lexical scoping means inner function can access properties of outer function, but vice versa can not happen.  
+2) A closure gives an inner function access to its outer scope using lexical scoping. 
+3) In JavaScript, closures are created every time a function is created, at function creation time.
