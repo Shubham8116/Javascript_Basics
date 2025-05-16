@@ -1,2 +1,2 @@
 # Javascript_Basics
-Basic understandings of Javascript
+A code repository for learning javascript in detail.
